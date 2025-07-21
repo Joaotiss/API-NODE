@@ -1,11 +1,14 @@
-import express from 'express';
+import express from 'express'
+import publicRoutes from './routes/public.js'
 
-const app = express();
+const app = express()
 
-console.log('Server is starting...');
+app.use(express.json()) // Middleware to parse JSON bodies
+
+app.use('/', publicRoutes)
 
 
 
 
 
-app.listen(3000, () => console.log('Server is running on port 3000'));
+app.listen(3000, () => console.log('Server is running on port '))
